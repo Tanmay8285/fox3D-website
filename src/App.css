@@ -1,0 +1,218 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body ,#root{
+  background-color: #000;
+  width: 100%;
+}
+main{
+  position: relative;
+  
+}
+#section-2{
+  min-height: 50vh;
+}
+#section-3{
+  min-height: 180vh;
+}
+#section-4{
+  min-height: 30vh;
+}
+#section-5{
+  min-height: 40vh;
+}
+section{
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+#canvas-elem::after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image:url(/background.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+  transition: all 0.3s linear;
+}
+#section-1{
+  nav{
+    width: 100%;
+    padding: 4vw;
+    display: flex;
+    justify-content: space-between;
+    height: 10vw;
+    svg{
+      width: 100%;
+      height: 100%;
+    }
+  
+  }
+  
+  #content{
+    margin-top: 4vw;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+  
+  
+  #left{
+    
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    h1{
+      line-height: 0.8;
+      font-size: 8rem;
+      text-align: right;
+    }
+  }
+  #right{
+    width: 50%;
+  }
+}
+}
+#section-2{
+  display: flex;
+  #left{
+    width: 60%;
+  }
+  #right{
+    width: 40%;
+    h1{
+      font-size: 1.8rem;
+      font-weight: 200;
+      line-height: 1.2;
+    }
+    p{
+      padding: 1vw;
+      width: 50%;
+      font-size: 1rem;
+      font-weight: 150;
+      color:skyblue;
+    }
+  }
+}
+#section-3{
+  .main{
+    display: flex;
+      flex-direction: column;
+    .class{
+      width: 80%;
+      display: flex;
+      opacity: 0.3;
+      cursor: pointer;
+      gap: 5vw;
+      transition: all 0.3s linear;
+      .right{
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        align-items: center;
+        width: 10%;
+        font-size: 0.9vw;
+        
+      }
+      .left{
+    
+        font-weight: 100;
+        font-size: 6vw;
+      }
+    }
+    .class:hover{
+      opacity: 1;
+    }
+  }
+  
+}
+main:has(#section-3 .class:hover) #canvas-elem::after{
+  opacity: 0;
+}
+.images{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top:0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+}
+main:has(#section-3 .class[img-title="tom"]:hover) .images #tom{
+  opacity: 1;
+  background-color: rgb(8, 15, 59);
+}
+main:has(#section-3 .class[img-title="nav"]:hover) .images #nav{
+  opacity: 1;
+  background-color: rgb(8, 15, 59);
+}
+main:has(#section-3 .class[img-title="msi"]:hover) .images #msi{
+  opacity: 1;
+  background-color: rgb(8, 15, 59);
+}
+main:has(#section-3 .class[img-title="phone"]:hover) .images #phone{
+  opacity: 1;
+  background-color: rgb(8, 15, 59);
+}
+main:has(#section-3 .class[img-title="fest"]:hover) .images #fest{
+  opacity: 1;
+  background-color: rgb(11, 23, 103);
+}
+main:has(#section-3 .class[img-title="ken"]:hover) .images #ken{
+  opacity: 1;
+  background-color: rgb(7, 43, 56);
+}
+main:has(#section-3 .class[img-title="opera"]:hover) .images #opera{
+  opacity: 1;
+  background-color: rgb(132, 8, 8);
+}
+#section-4{
+  padding: 6vw;
+  position: relative;
+  
+  .top{
+    width: 100%;
+    display: flex;
+    text-align: end;
+    h1{
+      font-weight: 100;
+      opacity: 0.7;
+    }
+
+  }
+  
+}
+#section-5{
+  padding: 6vw;
+  position: relative;
+  
+  .bottom{
+    width: 100%;
+    display: flex;
+    .left{
+      width: 50%;
+    }
+    .right{
+      width: 30%;
+      opacity: 0.5;
+      p{
+        font-weight: 100;
+      }
+    }
+  }
+  
+}
